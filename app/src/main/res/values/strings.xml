@@ -9,6 +9,7 @@
     <string name="firebase_database_title">Firebase Database</string>
 
     <!-- Nessie -->
+    <string name="nessie_create_customers">Register as a new customer</string>
     <string name="nessie_customers">Get Customers</string>
     <string name="nessie_deposit">Create Deposit</string>
     <string name="customer_first_name">"First Name: "</string>
@@ -23,6 +24,18 @@
         <item>balance</item>
         <item>rewards</item>
     </string-array>
+
+    <!-- Sign up -->
+    <string name="profile_title">My Profile</string>
+    <string name="login_tab_name">Log in</string>
+    <string name="signup_tab_name">Sign up</string>
+    <string name="login_signup_email">Email</string>
+    <string name="login_signup_password">Password</string>
+    <string name="login_signup_confirm_password">Confirm Password</string>
+    <string name="signup_first_name">First Name</string>
+    <string name="signup_last_name">Last Name</string>
+    <string name="signup_button">Sign up</string>
+    <string name="login_button">Log in</string>
 
     <!-- Card.IO -->
     <string name="launch_cardio_scanner">Launch Scanner</string>

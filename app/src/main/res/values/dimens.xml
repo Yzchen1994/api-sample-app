@@ -24,5 +24,9 @@
     <dimen name="customer_listview_height">300dp</dimen>
     <dimen name="nessie_heading_size">25sp</dimen>
     <dimen name="nessie_result_size">15sp</dimen>
-    
+
+    <!-- Global layout -->
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_default">8dp</dimen>
+
 </resources>
