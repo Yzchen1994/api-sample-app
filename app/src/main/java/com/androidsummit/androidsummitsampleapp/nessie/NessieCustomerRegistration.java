@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.androidsummit.androidsummitsampleapp.BuildConfig;
 import com.androidsummit.androidsummitsampleapp.R;
 import com.androidsummit.androidsummitsampleapp.apimenu.NessieClientWithLog;
 import com.reimaginebanking.api.nessieandroidsdk.NessieError;
@@ -29,6 +30,8 @@ public class NessieCustomerRegistration extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nessie_create_customer_activity);
+
+        mClient = NessieClientWithLog.getInstance(BuildConfig.NESSIE_API_KEY);
 
         mEtFirstName = (EditText) findViewById(R.id.fragment_signup_et_first_name);
         mEtLastName = (EditText) findViewById(R.id.fragment_signup_et_last_name);
