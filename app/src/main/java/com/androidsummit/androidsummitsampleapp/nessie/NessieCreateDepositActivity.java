@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 import com.androidsummit.androidsummitsampleapp.BuildConfig;
 import com.androidsummit.androidsummitsampleapp.R;
+import com.androidsummit.androidsummitsampleapp.apimenu.NessieClientWithLog;
 import com.reimaginebanking.api.nessieandroidsdk.NessieError;
 import com.reimaginebanking.api.nessieandroidsdk.NessieResultsListener;
 import com.reimaginebanking.api.nessieandroidsdk.constants.TransactionMedium;
 import com.reimaginebanking.api.nessieandroidsdk.models.Account;
 import com.reimaginebanking.api.nessieandroidsdk.models.Deposit;
 import com.reimaginebanking.api.nessieandroidsdk.models.PostResponse;
-import com.reimaginebanking.api.nessieandroidsdk.requestclients.NessieClient;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
  */
 public class NessieCreateDepositActivity extends AppCompatActivity {
 
-    private NessieClient mClient;
+    private NessieClientWithLog mClient;
 
     private EditText amountEditText;
 
@@ -47,7 +47,7 @@ public class NessieCreateDepositActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nessie_create_deposit_activity);
 
-        mClient = NessieClient.getInstance(BuildConfig.NESSIE_API_KEY);
+        mClient = NessieClientWithLog.getInstance(BuildConfig.NESSIE_API_KEY);
 
         resultTextView = (TextView) findViewById(R.id.deposit_result_textview);
 

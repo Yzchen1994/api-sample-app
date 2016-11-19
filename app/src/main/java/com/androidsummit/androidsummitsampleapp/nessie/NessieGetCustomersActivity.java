@@ -9,10 +9,10 @@ import android.widget.ListView;
 
 import com.androidsummit.androidsummitsampleapp.BuildConfig;
 import com.androidsummit.androidsummitsampleapp.R;
+import com.androidsummit.androidsummitsampleapp.apimenu.NessieClientWithLog;
 import com.reimaginebanking.api.nessieandroidsdk.NessieError;
 import com.reimaginebanking.api.nessieandroidsdk.NessieResultsListener;
 import com.reimaginebanking.api.nessieandroidsdk.models.Customer;
-import com.reimaginebanking.api.nessieandroidsdk.requestclients.NessieClient;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class NessieGetCustomersActivity extends AppCompatActivity {
 
-    private NessieClient mClient;
+    private NessieClientWithLog mClient;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class NessieGetCustomersActivity extends AppCompatActivity {
         setContentView(R.layout.nessie_get_customers_activity);
 
         String key = BuildConfig.NESSIE_API_KEY;
-        mClient = NessieClient.getInstance(key);
+        mClient = NessieClientWithLog.getInstance(key);
 
         Button customersBtn = (Button) findViewById(R.id.nessie_get_customers_button);
         customersBtn.setOnClickListener(new View.OnClickListener() {
