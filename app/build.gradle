@@ -12,7 +12,7 @@ android {
         versionName "1.0"
 
         // Load any API keys from gradle.properties
-        buildConfigField("String", "NESSIE_API_KEY", NESSIE_API_KEY)
+        buildConfigField("String", "NESSIE_API_KEY", "\"24a5a0776ed2bd84e8cde185d9db3770\"")
     }
     buildTypes {
         release {

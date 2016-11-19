@@ -3,6 +3,8 @@ package com.androidsummit.androidsummitsampleapp.nessie;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,8 @@ import com.reimaginebanking.api.nessieandroidsdk.requestclients.NessieClient;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * An activity demonstrating how to create a deposit using the Nessie API.
@@ -48,6 +52,7 @@ public class NessieCreateDepositActivity extends AppCompatActivity {
         resultTextView = (TextView) findViewById(R.id.deposit_result_textview);
 
         amountEditText = (EditText) findViewById(R.id.input_amount_edittext);
+        amountEditText.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(10, 2)});
         descriptionEditText = (EditText) findViewById(R.id.input_description_edittext);
         mediumSpinner = (Spinner) findViewById(R.id.input_medium_spinner);
 
@@ -76,7 +81,6 @@ public class NessieCreateDepositActivity extends AppCompatActivity {
                         // should probably show an error message stating why the accounts call failed
                     }
                 });
-
 
 
             }
@@ -132,12 +136,31 @@ public class NessieCreateDepositActivity extends AppCompatActivity {
 
         // build deposit object to create
         Deposit deposit = new Deposit.Builder()
-            .amount(amount)
-            .description(description)
-            .medium(medium)
-            .transactionDate(stringDate)
-            .build();
+                .amount(amount)
+                .description(description)
+                .medium(medium)
+                .transactionDate(stringDate)
+                .build();
 
         return deposit;
+    }
+
+    public class DecimalDigitsInputFilter implements InputFilter {
+
+        Pattern mPattern;
+
+        public DecimalDigitsInputFilter(int digitsBeforeZero, int digitsAfterZero) {
+            mPattern = Pattern.compile("[0-9]{0," + (digitsBeforeZero - 1) + "}+((\\.[0-9]{0," + (digitsAfterZero - 1) + "})?)||(\\.)?");
+        }
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+
+            Matcher matcher = mPattern.matcher(dest);
+            if (!matcher.matches())
+                return "";
+            return null;
+        }
+
     }
 }
