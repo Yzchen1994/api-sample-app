@@ -64,12 +64,14 @@ public class NessieCustomerRegistration extends AppCompatActivity {
                         public void onSuccess(Object result) {
                             Toast.makeText(getApplicationContext(),
                                     getString(R.string.signup_success_message), Toast.LENGTH_SHORT).show();
+                            finish();
                         }
 
                         @Override
                         public void onFailure(NessieError error) {
                             Toast.makeText(getApplicationContext(),
-                                    getString(R.string.signup_failure_message), Toast.LENGTH_SHORT).show();
+                                    getString(R.string.signup_failure_message) + ": " + error.getMessage(), Toast.LENGTH_SHORT)
+                                    .show();
                         }
                     });
                 }
