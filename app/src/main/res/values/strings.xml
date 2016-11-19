@@ -35,7 +35,23 @@
     <string name="signup_first_name">First Name</string>
     <string name="signup_last_name">Last Name</string>
     <string name="signup_button">Sign up</string>
+    <string name="signup_street_number">Street number</string>
+    <string name="signup_street_name">Street name</string>
+    <string name="signup_city">City</string>
+    <string name="signup_state">State</string>
+    <string name="signup_zip">Zip</string>
     <string name="login_button">Log in</string>
+
+    <string name="signup_first_name_empty">First name cannot be empty.</string>
+    <string name="signup_last_name_empty">Last name cannot be empty.</string>
+    <string name="signup_street_number_empty">Street number cannot be empty.</string>
+    <string name="signup_street_name_empty">Street name cannot be empty.</string>
+    <string name="signup_city_empty">City cannot be empty.</string>
+    <string name="signup_state_empty">State cannot be empty.</string>
+    <string name="signup_zip_empty">Zip cannot be empty.</string>
+
+    <string name="signup_success_message">Successfully created the user</string>
+    <string name="signup_failure_message">Failed to create the user</string>
 
     <!-- Card.IO -->
     <string name="launch_cardio_scanner">Launch Scanner</string>
