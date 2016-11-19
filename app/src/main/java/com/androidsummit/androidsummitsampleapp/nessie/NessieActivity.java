@@ -11,7 +11,7 @@ import com.androidsummit.androidsummitsampleapp.R;
 
 /**
  * This activity demonstrates usage of the Nessie API - Capital One's hackathon API.
- *
+ * <p>
  * Nessie Android SDK - https://github.com/nessieisreal/nessie-android-sdk Nessie API Documentation - api.reimaginebanking.com
  */
 public class NessieActivity extends AppCompatActivity {
@@ -36,6 +36,15 @@ public class NessieActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), NessieCreateDepositActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button createAccountButton = (Button) findViewById(R.id.nessie_create_account_button);
+        createAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NessieCreateAccountActivity.class);
                 startActivity(intent);
             }
         });

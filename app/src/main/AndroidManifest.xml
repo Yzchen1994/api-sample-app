@@ -37,6 +37,7 @@
         <activity android:name=".nessie.NessieActivity" />
         <activity android:name=".nessie.NessieGetCustomersActivity" />
         <activity android:name=".nessie.NessieCreateDepositActivity" />
+        <activity android:name=".nessie.NessieCreateAccountActivity" />
 
         <!-- *************************** -->
 

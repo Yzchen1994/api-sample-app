@@ -11,6 +11,7 @@
     <!-- Nessie -->
     <string name="nessie_customers">Get Customers</string>
     <string name="nessie_deposit">Create Deposit</string>
+    <string name="nessie_create_account">Create Account</string>
     <string name="customer_first_name">"First Name: "</string>
     <string name="customer_last_name">"Last Name: "</string>
     <string name="nessie_customers_header">Retrieve a List of Customers</string>
