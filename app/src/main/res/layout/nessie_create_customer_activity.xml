@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:text="@string/signup_first_name" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_last_name" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_street_number" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_street_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_street_name" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_street_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_city" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_state" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:maxLength="2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/signup_zip" />
+
+            <EditText
+                android:id="@+id/fragment_signup_et_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_large" />
+
+            <Button
+                android:id="@+id/fragment_signup_bt_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/signup_button" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

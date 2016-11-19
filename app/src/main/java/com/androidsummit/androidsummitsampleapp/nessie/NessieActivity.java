@@ -21,6 +21,15 @@ public class NessieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nessie_activity);
 
+        Button registerButton = (Button) findViewById(R.id.nessie_create_customers_button);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NessieCustomerRegistration.class);
+                startActivity(intent);
+            }
+        });
+
         Button customersButton = (Button) findViewById(R.id.nessie_customers_button);
         customersButton.setOnClickListener(new View.OnClickListener() {
             @Override
