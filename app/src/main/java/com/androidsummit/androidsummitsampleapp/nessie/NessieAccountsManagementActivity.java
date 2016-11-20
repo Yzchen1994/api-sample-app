@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.androidsummit.androidsummitsampleapp.BuildConfig;
@@ -30,6 +32,7 @@ public class NessieAccountsManagementActivity extends AppCompatActivity {
     private String mUserId;
 
     private ListView mListView;
+    private Button mCreateUserBtn;
 
     private List<Account> mAccounts = new ArrayList<>();
 
@@ -50,6 +53,14 @@ public class NessieAccountsManagementActivity extends AppCompatActivity {
         mClient = NessieClientWithLog.getInstance(key);
 
         mListView = (ListView) findViewById(R.id.accounts_listview);
+        mCreateUserBtn = (Button) findViewById(R.id.nessie_create_account_button);
+
+        mCreateUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(NessieCreateAccountActivity.getLaunchIntent(getApplicationContext(), mUserId));
+            }
+        });
 
         getCheckingInfo();
     }

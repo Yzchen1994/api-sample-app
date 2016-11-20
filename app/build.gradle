@@ -52,6 +52,7 @@ dependencies {
 
     // Firebase Database
     compile 'com.google.firebase:firebase-database:9.4.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.4.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

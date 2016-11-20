@@ -58,6 +58,10 @@
     <string name="account_current_balance">Current Balance</string>
     <string name="account_reward_balance">Reward Balance</string>
 
+    <!-- Create New Account -->
+    <string name="new_account_type">Account Type</string>
+    <string name="new_account_nickname">Nickname</string>
+
     <!-- Card.IO -->
     <string name="launch_cardio_scanner">Launch Scanner</string>
 
