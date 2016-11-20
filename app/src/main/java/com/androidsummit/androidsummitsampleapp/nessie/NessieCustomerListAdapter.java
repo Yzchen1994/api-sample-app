@@ -54,7 +54,7 @@ public class NessieCustomerListAdapter extends ArrayAdapter<Customer> implements
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = NessieAccountManagementActivity.getLaunchIntent(getContext(),
+                Intent intent = NessieAccountsManagementActivity.getLaunchIntent(getContext(),
                         mCustomers.get(position).getId());
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);

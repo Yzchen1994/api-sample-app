@@ -46,7 +46,7 @@
         <activity android:name=".nessie.NessieCreateDepositActivity" />
         <activity android:name=".nessie.NessieCreateAccountActivity" />
         <activity android:name=".nessie.NessieCustomerRegistration" />
-        <activity android:name=".nessie.NessieAccountManagementActivity"/>
+        <activity android:name=".nessie.NessieAccountsManagementActivity"/>
 
         <!-- *************************** -->
 

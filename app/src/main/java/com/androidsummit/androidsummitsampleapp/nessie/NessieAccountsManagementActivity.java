@@ -23,7 +23,7 @@ import java.util.List;
  * Created by yuzechen on 11/19/16.
  */
 
-public class NessieAccountManagementActivity extends AppCompatActivity {
+public class NessieAccountsManagementActivity extends AppCompatActivity {
     private static final String USER_ID = "extra_user_id";
     private NessieClientWithLog mClient;
 
@@ -34,7 +34,7 @@ public class NessieAccountManagementActivity extends AppCompatActivity {
     private List<Account> mAccounts = new ArrayList<>();
 
     public static Intent getLaunchIntent(@NonNull Context context, @NonNull String userId) {
-        return new Intent(context, NessieAccountManagementActivity.class)
+        return new Intent(context, NessieAccountsManagementActivity.class)
                 .putExtra(USER_ID, userId);
     }
 
