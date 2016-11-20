@@ -16,8 +16,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.androidsummit.androidsummitsampleapp.R;
-import com.androidsummit.androidsummitsampleapp.firebase.database.FirebaseCustomer;
-import com.androidsummit.androidsummitsampleapp.firebase.database.FirebaseCustomerListAdapter;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -58,7 +56,7 @@ public class FirebaseDatabaseActivity extends AppCompatActivity {
         saveCustomerButton = (Button) findViewById(R.id.firebase_save_customer_button);
 
         customersListView = (ListView) findViewById(R.id.firebase_customers_listview);
-        customersListView.setAdapter(new FirebaseCustomerListAdapter(this, R.layout.nessie_customer, mCustomers));
+        customersListView.setAdapter(new FirebaseCustomerListAdapter(this, R.layout.nessie_customer_adapter, mCustomers));
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
 

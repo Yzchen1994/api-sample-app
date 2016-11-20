@@ -45,7 +45,7 @@ public class NessieGetCustomersActivity extends AppCompatActivity {
                         // load results into list view
                         ListView customerListView = (ListView) findViewById(R.id.customers_result_listview);
                         NessieCustomerListAdapter nessieCustomerListAdapter =
-                            new NessieCustomerListAdapter(getBaseContext(), R.layout.nessie_customer, customers);
+                            new NessieCustomerListAdapter(getBaseContext(), R.layout.nessie_customer_adapter, customers);
                         customerListView.setAdapter(nessieCustomerListAdapter);
                     }
 
