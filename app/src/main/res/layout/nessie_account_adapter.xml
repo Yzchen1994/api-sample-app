@@ -5,6 +5,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- Account name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_large">
+
+        <TextView
+            android:id="@+id/account_adapter_account_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="@string/account_current_balance" />
+
+        <TextView
+            android:id="@+id/account_adapter_ending_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            tools:text="(Ending in 1234)" />
+
+    </LinearLayout>
+
     <!-- Current balance -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,13 +43,14 @@
             android:text="@string/account_current_balance" />
 
         <TextView
-            android:id="@+id/nessie_account_adapter_current_balance_tv"
+            android:id="@+id/account_adapter_current_balance_tv"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             tools:text="$100,000" />
 
     </LinearLayout>
+
     <!-- Reward Balance -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +65,7 @@
             android:text="@string/account_reward_balance" />
 
         <TextView
-            android:id="@+id/nessie_account_adapter_reward_balance_tv"
+            android:id="@+id/account_adapter_reward_balance_tv"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
